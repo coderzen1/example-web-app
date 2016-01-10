@@ -1,0 +1,24 @@
+.ptv-grid.custom-field
+  .custom-field__add-field
+  
+    = simple_form_for [:admin, @user.company, @user] do |f|
+      .form-input
+        .ptv-grid__column-1
+          .form-input__label = t("name")
+        .ptv-grid__column-2
+          .form-input__field.form-input__field--disabled User Name
+      .form-input
+        .ptv-grid__column-1
+          .form-input__label = t("email")
+        .ptv-grid__column-2
+          .form-input__field.form-input__field--disabled = @user.email
+      .form-input
+        = f.association :company
+      .form-input
+        .form-input__checkbox
+          / = f.input :active, as: :boolean, label_html: { class: 'form-input__label--checkbox' }, input_html: { class: 'form-input__field--checkbox' }
+          = f.check_box :active, class: "form-input__field--checkbox"
+          = f.label :active, class: "form-input__label--checkbox"
+            | Active
+            span.form-input__checkbox-span
+      = f.button :submit, t("users_form_edit"), class: "button--admin button--save custom-field__button-save u-background-dark"

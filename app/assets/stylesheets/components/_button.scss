@@ -1,0 +1,113 @@
+.button {
+  background-color: $primary-background-color;
+
+  &:hover {
+    background-color: darken($primary-background-color, 6%);
+  }
+
+  &.button--fab {
+    width: 41px;
+    height: 41px;
+
+    border-radius: 50%;
+
+    background: {
+      repeat: no-repeat;
+      position: center;
+      size: 14px;
+    }
+  }
+}
+
+.button--admin {
+  height: 44px;
+  font-size: 18px;
+  color: $base-white-color;
+  box-shadow: $primary-box-shadow;
+
+  line-height: 44px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 0;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.button--admin-base {
+  background-color: $primary-card-background-color;
+
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.button--admin-dark {
+  background-color: $primary-text-color;
+  padding: 0 45px;
+
+  &:hover {
+    background-color: darken($primary-text-color, 30%);
+  }
+}
+
+.button--search {
+  width: 56px;
+  margin-left: 5px;
+  background: {
+    image: asset_url('icons/search-glass.svg');
+    position: center;
+    repeat: no-repeat;
+    size: 18px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.button--add {
+  width: 86px;
+  height: $primary-input-field-height;
+  margin-left: 15px;
+  background: {
+    image: asset_url('icons/plus.svg');
+    position: center;
+    repeat: no-repeat;
+    size: 20px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.button--save {
+  height: 60px;
+  width: 486px;
+  color: $base-white-color;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.button--modal-submit {
+  height: 60px;
+  width: 60%;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 5px;
+  color: $base-white-color;
+  font-size: 28px;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

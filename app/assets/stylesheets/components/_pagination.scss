@@ -1,0 +1,30 @@
+.pagination {
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  .page,
+  .next,
+  .prev {
+    padding: 10px;
+  }
+
+  .first,
+  .last {
+    padding: 10px 0;
+  }
+
+  .page {
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    width: 35px;
+
+    &.current {
+      background-color: $base-light-gray-color;
+      border-radius: 5px;
+      border: 1px solid $primary-card-shadow-color;
+    }
+  }
+}

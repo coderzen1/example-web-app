@@ -1,0 +1,11 @@
+section.sign-in
+  .sign-in__content
+    h2.sign-in__main-title = t 'devise.invitations.edit.header'
+    = simple_form_for(resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put }) do |f|
+      = f.hidden_field :invitation_token
+      .sign-in__field
+        = f.input :password, label: t("devise_edit_password_form_password_label"), input_html: { class: "sign-in__input" }, label_html: { class: "sign-in__label" }
+      .sign-in__field
+        = f.input :password_confirmation, label: t("devise_edit_password_form_password_confirm_label"), input_html: { class: "sign-in__input" }, label_html: { class: "sign-in__label" }
+      .actions
+        = f.submit t("devise.invitations.edit.submit_button"), class: 'sign-in__field sign-in__submit-button'

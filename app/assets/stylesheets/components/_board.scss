@@ -1,0 +1,10 @@
+.board {
+  .board__content {
+    width: 100%;
+    padding-top: $board-content-height;
+  }
+
+  .board__header {
+    margin-top: -$board-header-height;
+  }
+}

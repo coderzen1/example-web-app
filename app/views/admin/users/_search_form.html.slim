@@ -1,0 +1,3 @@
+= search_form_for @q, url:[:admin, current_company, :users] do |f|
+  = f.search_field :email_cont, class: 'search-form__input-field search-form__input-field--user', placeholder: 'Search'
+  = f.submit '', class: 'button--admin button--search search-form__button search-form__button--search u-background-dark'

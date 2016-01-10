@@ -1,0 +1,138 @@
+.sign-in {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  .sign-in__content {
+    width: 490px;
+    margin: 0 auto;
+  }
+
+  .sign-in__text {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .sign-in__title {
+    color: $primary-admin-color;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 37px;
+  }
+
+  .sign-in__subtitle {
+    color: $secondary-text-color;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .sign-in__main-title {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    color: $primary-admin-color;
+  }
+
+  .sign-in__field {
+    @extend %card;
+    max-width: 100%;
+    margin-bottom: 20px;
+    height: 90px;
+
+    .form-input__error {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  .sign-in__label {
+    font-size: 24px;
+    font-weight: bold;
+    color: $base-black-color;
+    width: 120px;
+    text-align: left;
+    height: 54px;
+    line-height: 54px;
+    vertical-align: middle;
+  }
+
+  .sign-in__input {
+    font-size: 20px;
+    width: 290px;
+    margin-left: 10px;
+    padding-left: 0;
+    display: inline-block;
+    background: transparent;
+    box-shadow: none;
+    height: 54px;
+    line-height: 54px;
+    vertical-align: middle;
+    border: 0;
+    border-bottom: 1px solid $base-black-color;
+    border-radius: 0;
+    text-align: center;
+  }
+
+  .sign-in__help {
+    color: $primary-color;
+    text-decoration: underline;
+    font-size: 14px;
+    margin: 17px 0 30px 20px;
+  }
+
+  .sign-in__help-label {
+    margin-top: 30px;
+    font-size: 24px;
+    line-height: 28px;
+    color: $primary-text-color;
+  }
+
+  .sign-in__checkbox {
+
+    .sign-in__checkbox-input {
+        display:none;
+    }
+
+    .sign-in__checkbox-input + .sign-in__help-label .sign-in__checkbox-span {
+        float: left;
+        border-radius: 5px;
+        margin-right: 15px;
+        width: 28px;
+        height: 28px;
+        vertical-align: middle;
+        background-color: $base-white-color;
+        cursor:pointer;
+        box-shadow: $primary-box-shadow;
+    }
+
+    .sign-in__checkbox-input:checked + .sign-in__help-label .sign-in__checkbox-span  {
+      background-color: $primary-color;
+      background: {
+          image: asset-url('icons/ic-check.svg');
+          position: center;
+          size: 20px;
+          repeat: no-repeat;
+      }
+    }
+  }
+
+  .sign-in__submit-button {
+    width: 100%;
+    background-color: $primary-admin-color;
+    color: $base-white-color;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    height: 100px;
+    border: 0;
+    margin-top: 60px;
+
+    &:focus {
+      border: 3px solid lighten($primary-admin-color, 40%);
+    }
+  }
+}

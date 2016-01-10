@@ -1,0 +1,15 @@
+section.sign-in
+  .sign-in__content
+    h2.sign-in__main-title = t("devise_edit_password_form_title")
+
+    = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+
+      = f.hidden_field :reset_password_token
+      .sign-in__field
+        = f.input :password, autofocus: true, autocomplete: "off", label: t("devise_edit_password_form_password_label"), input_html: { class: "sign-in__input" }, label_html: { class: "sign-in__label" }
+      .sign-in__field
+        = f.input :password_confirmation, autocomplete: "off", label: t("devise_edit_password_form_password_confirm_label"), input_html: { class: "sign-in__input" }, label_html: { class: "sign-in__label" }
+      .actions
+        = f.submit t("devise_edit_password_form_submit"), class: 'sign-in__field sign-in__submit-button'
+    .sign-in__help
+      = render "devise/shared/links"

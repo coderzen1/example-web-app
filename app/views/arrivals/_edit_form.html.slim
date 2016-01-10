@@ -1,0 +1,28 @@
+.modal
+  = simple_form_for @arrival, url: arrival_update_path(@arrival.location.edit_token, @arrival), html: { novalidate: false }, remote: true do |f|
+    .modal-content
+      .modal__main-title Edit
+      .modal__header
+        =image_tag('/x.svg', class: 'modal__close-button')
+      .modal__body
+        .modal__row
+          .modal__column.modal__column-40.modal__title
+            = f.label t('arrival_book_vehicle_date_label')
+          .modal__column.modal__column-60
+            = text_field_tag "arrival[pta][date]", @arrival.pta.strftime("%d/%m/%Y"), required: true, placeholder: 'dd/mm/yyyy', class: "form-input__field form-input__field--modal js-modal-datepicker"
+
+        .modal__row
+          .modal__column.modal__column-40.modal__title
+            = f.label t('arrival_book_vehicle_time_label')
+          .modal__column.modal__column-60
+            = text_field_tag "arrival[pta][time]", @arrival.pta.strftime("%H:%M"), required: true, placeholder: 'hh:mm', class: "form-input__field form-input__field--modal"
+
+        - @arrival_custom_fields.each do |key, value|
+          .modal__row.custom-field
+            .modal__column.modal__column-40.modal__title
+              = f.label key
+            .modal__column.modal__column-60
+              = text_field_tag "arrival[custom_fields][#{key}]", value, class: "form-input__field form-input__field--modal"
+        .modal__row
+          .modal__submit
+            = f.button :submit, t("save"), class: "button--modal-submit u-background-dark"

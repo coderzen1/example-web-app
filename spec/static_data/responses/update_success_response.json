@@ -1,0 +1,26 @@
+{
+  "responseStatus": {
+    "errorCode": "SUCCESS",
+    "message": "b1f525f8ca3a47a68581a5840087c653"
+  },
+   "location":
+    {
+      "locationId": "DH69V2UCZIXWGUNJU54SFXLJT",
+     "revision": 1,
+     "name": "Testtest34567",
+     "coordinate": {
+       "locationX": 15.9717496000001,
+       "locationY": 45.8118682
+     },
+     "address": {
+       "postCode": "10000",
+       "city": "Zagreb",
+       "street": "Varšavska ulica"
+     },
+     "customDataFieldsForStop":[
+       {"name": "a"},
+       {"name": "v"},
+       {"name": "c"}
+       ]
+     }
+}

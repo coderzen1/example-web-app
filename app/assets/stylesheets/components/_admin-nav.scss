@@ -1,0 +1,51 @@
+.admin-nav {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: $secondary-background-color;
+  font-size: 18px;
+}
+
+.admin-nav__link {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &.admin-nav__link--light-text {
+    color: $ternary-text-color;
+  }
+}
+
+.admin-nav__link--bold {
+  font-weight: bold;
+}
+
+.admin-nav__column-left {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 25px;
+  transform: translate(0, -50%);
+}
+
+.admin-nav__column-middle {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.admin-nav__column-right {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  bottom: auto;
+  left: auto;
+  transform: translate(0, -50%);
+}

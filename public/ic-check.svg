@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="27px" viewBox="0 0 36 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4 (356) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_check</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Power-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="10b-Power-Arival-board-EDIT-PTA" sketch:type="MSArtboardGroup" transform="translate(-819.000000, -444.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(479.000000, 375.000000)">
+                <g id="check" transform="translate(328.000000, 53.000000)" sketch:type="MSShapeGroup">
+                    <g id="ic_check" transform="translate(6.000000, 5.000000)">
+                        <path d="M0,0 L48,0 L48,48 L0,48 L0,0 Z" id="Bounds" opacity="0" fill-opacity="0.1" fill="#FF0000"></path>
+                        <path d="M18,32.34 L9.66,24 L6.82,26.82 L18,38 L42,14 L39.18,11.18 L18,32.34 Z" id="Shape" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+.settings-nav {
+  @extend %page-nav;
+  padding-top: 150px;
+}
+
+.settings-nav__title {
+  @extend %page-nav__title;
+}
+
+.settings-nav__title--header {
+  height: 215px;
+  text-align: center;
+  font-size: 48px;
+  line-height: 214px;
+}
+
+.settings-nav__links {
+  @include container(825px);
+  @include with-layout(3 .05 after) {
+    .settings-nav__link { @include span(1); }
+    .settings-nav__link:last-child { @include last; }
+    .settings-nav__link--push-1 { @include span(1); @include push(1); }
+  }
+  margin-top: 30px;
+  text-align: center;
+}
+
+.settings-nav__link {
+  text-align: center;
+  background-color: $base-white-color;
+}

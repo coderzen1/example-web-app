@@ -1,0 +1,18 @@
+{ "token": "PTV_Loc_Infinum_BY1FII2CD",
+  "source": "ptv_arrival_app",
+  "location": {
+    "name": "Location1",
+    "coordinate": {
+      "locationX": 15.9889981,
+      "locationY": 45.8033957
+    },
+    "address": {
+      "postCode": 10000,
+       "city": "Zagreb",
+       "street": "Strojarska cesta",
+       "houseNumber": 22
+    },
+    "customDataFieldsForStop": [],
+    "locationId": "RPGJNQ614F27S5Q74WJ1G8QG6"
+  }
+ }

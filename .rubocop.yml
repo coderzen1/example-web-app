@@ -1,0 +1,17 @@
+AbcSize:
+  Max: 20
+
+LineLength:
+  Max: 100
+
+Documentation:
+  Enabled: False
+
+WordArray:
+  Enabled: False
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/*.rb'
+  RunRailsCops: true

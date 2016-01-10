@@ -1,0 +1,144 @@
+.arrivals-location__wrapper {
+  display: table;
+  width: 98%;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 2%;
+}
+
+.arrivals-location {
+  @extend %container;
+  position: relative;
+  display: table-cell;
+  height: 100%;
+
+  @include with-layout(8 0 split) {
+    .arrivals-location__column-1 { @include span(1); }
+    .arrivals-location__column-2 { @include span(2); }
+    .arrivals-location__column-3 { @include span(3); }
+    .arrivals-location__column-4 { @include span(2); }
+  }
+
+  .arrivals-location__column {
+    @extend %container;
+    position: relative;
+    height: 100%;
+
+    .arrivals-location__column--left {
+      flex: 1;
+      float: left;
+      padding-right: 2%;
+      padding-left: 1%;
+    }
+
+    .arrivals-location__column--right {
+      flex: 1;
+      float: right;
+      padding-right: 1%;
+    }
+
+    &.arrivals-location__column-1 {
+
+      .arrivals-location__column-content-wrapper {
+        background-color: $base-white-color;
+      }
+
+      .arrivals-location__column-content {
+        flex-direction: column;
+        height: auto;
+        padding: 3%;
+      }
+
+      .arrivals-location__card:first-child {
+        margin-top: 0.5em;
+      }
+
+      .arrivals-location__card {
+        background-color: $base-white-color;
+      }
+    }
+
+    &.arrivals-location__column-2 {
+      .arrivals-location__card {
+        background-color: $base-white-color;
+      }
+    }
+
+    &.arrivals-location__column-3 {
+
+      .arrivals-location__card {
+        margin-right: 1%;
+        color: white;
+        border: 2px solid $base-white-color;
+      }
+
+      .arrivals-location__card:first-child {
+        margin-left: 1%;
+      }
+
+      .arrivals-location__card-button {
+        background-color: $base-white-color;
+        color: $base-black-color;
+      }
+    }
+
+    &.arrivals-location__column-4 {
+      .arrivals-location__card {
+        background-color: $base-white-color;
+      }
+    }
+  }
+
+  .arrivals-location__column-header-title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    color: $primary-text-color;
+  }
+
+  .arrivals-location__column-content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .arrivals-location__column-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .arrivals-location__card {
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: auto;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    padding: 15px 5px;
+    margin-bottom: 1vh;
+    border-radius: 5px;
+    border: 2px solid $base-black-opacity-03-color;
+    overflow: hidden;
+
+    @media #{$tablet} and (max-width: 1099px) {
+      font-size: 15px;
+    }
+  }
+
+  .arrivals-location__card-button {
+    background-color: $base-red-color;
+    color: $base-white-color;
+    border-radius: 3px;
+    border: 0;
+    padding: 2px 8px;
+    line-height: 28px;
+  }
+}
+
+.new-arrivals {
+  padding-top: 150px;
+}

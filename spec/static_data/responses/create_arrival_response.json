@@ -1,0 +1,31 @@
+{
+  "tour": {
+    "stops": [
+      {
+        "coordinate": {
+          "locationX": 15.9889981,
+          "locationY": 45.8033957
+        },
+        "earliestArrivalTime": "2015-09-18T15:19:00.0000000+01:00",
+        "latestDepartureTime": "2015-09-18T15:19:00.0000000+01:00",
+        "serviceTimeAtStop": 0,
+        "useServicePeriodForRecreation": false,
+        "weightWhenLeavingStop": 0,
+        "stopPositionInTour": 0,
+        "customData": {
+          "pin": 4223,
+          "orderId": "DN1234567890"
+        },
+        "scemid": "4OQMS32141"
+      }
+    ],
+    "vehicle": {
+      "vehicleProfileID": "mg-transporter"
+    },
+    "scemid": "8QXWAUB2EC"
+  },
+  "responseStatus": {
+    "errorCode": "SUCCESS",
+    "message": "1a66a79b564a4982afbea57000cbbc7e"
+  }
+}

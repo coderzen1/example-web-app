@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: web-arrival-board_development
+
+test:
+  <<: *default
+  database: web-arrival-board_test
+
+staging:
+  <<: *default
+  host: dubovac.infinum.hr
+  port: 5432
+  database: arrival_board_staging
+  username: arrival_board
+  password: DgaD0DhP9kc5ArpZ
+
+production:
+  <<: *default
+  database: web-arrival-board_production
+  username: web-arrival-board
+  password: <%= ENV['WEB-ARRIVAL-BOARD_DATABASE_PASSWORD'] %>

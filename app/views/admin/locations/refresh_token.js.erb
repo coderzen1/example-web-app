@@ -1,0 +1,13 @@
+<% if params[:token_type] == "edit" %>
+
+  var $link =  $("#js-edit-link-<%= @location.id %>");
+  $link.text("<%= arrival_new_url(token: @location.edit_token) %>");
+  $link.attr("href", "<%= arrival_new_path(token: @location.edit_token) %>")
+
+<% elsif params[:token_type] == "show" %>
+
+  var $link =  $("#js-show-link-<%= @location.id %>");
+  $link.text("<%= arrivals_url(token: @location.show_token) %>");
+  $link.attr("href", "<%= arrivals_path(token: @location.show_token) %>")
+
+<% end %>

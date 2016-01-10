@@ -1,0 +1,26 @@
+{ "location": {
+    "name": "Lokacija 3",
+    "locationId": "1G1TY62SJC4DNYH41R6Z2Q3NL",
+    "coordinate": {
+      "locationX": 15.9717496000001,
+      "locationY": 45.8118682
+    },
+    "address": {
+      "postCode": "10000",
+      "city": "Zagreb",
+      "street": "Varšavska ulica"
+    },
+    "customDataFieldsForStop": [
+      {
+        "name": "weight"
+      },
+      {
+        "name": "height"
+      }
+    ]
+  },
+  "responseStatus": {
+    "errorCode": "SUCCESS",
+    "message": "54bf147e26df42db9f64a57700db1a83"
+  }
+}

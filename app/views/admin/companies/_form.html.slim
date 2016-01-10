@@ -1,0 +1,51 @@
+.company-form.ptv-grid
+  = simple_form_for [:admin, @company] do |f|
+    .form-input
+      = f.input :language, collection: ["English", "German", "Croatian"]
+    .form-input
+      = f.input :name, placeholder: t("form_name_placeholder")
+
+    = f.simple_fields_for :address do |a|
+      .form-input
+        = a.input :street, label: t("form_street_label"), placeholder: t("form_street_placeholder"), input_html: { class: 'form-input__field--large' }
+        .form-input__inline-column--right
+          = a.input :number, placeholder: t("form_number_placeholder"), label_html: { class: 'form-input__label--hide' }, input_html: { class: 'form-input__field--xsmall' }
+      .form-input
+        = a.input :city, label: t("form_city_label"), placeholder: t("form_city_placeholder"), input_html: { class: 'form-input__field--medium' }
+        .form-input__inline-column--right
+          = a.input :zip_code, placeholder: t("form_zip_placeholder"), label_html: { class: 'form-input__label--hide' }, input_html: { class: 'form-input__field--small-with-margin' }
+    .form-input
+      - if current_user.admin?
+        = f.input :token, readonly: true
+      - else current_user.superadmin?
+        = f.input :token
+
+    .form-input
+      .ptv-grid__column-1
+        .form-input__label = t("dashboard_color")
+      .ptv-grid__column-2
+        .form-input__field.form-input__field--dashboard-color-code.js-dashboard-color-code
+        .form-input__field--dashboard-color.js-dashboard-color
+          - if @company.dashboard_colors
+            = f.input :dashboard_colors, label_html: { class: 'form-input__label--hide'}, input_html: { class: 'js-company-dashboard-colors', name: 'company[dashboard_colors][]', value: @company.dashboard_colors[0] }
+          - else
+            = f.input :dashboard_colors, label_html: { class: 'form-input__label--hide'}, input_html: { class: 'js-company-dashboard-colors', name: 'company[dashboard_colors][]' }
+          = hidden_field_tag 'company[dashboard_colors][]', '', class: 'js-second-dashboard-color'
+          = hidden_field_tag 'company[dashboard_colors][]', '', class: 'js-third-dashboard-color'
+    .form-input.form-input--sm-height
+      .ptv-grid__column-1.ptv-grid__column-1--empty
+      .ptv-grid__column-2
+        .form-input__field.form-input__field--expanded-board.js-dashboard-display-column
+          .form-input--dashboard-display-column.form-input--dashboard-display-column-1
+          .form-input--dashboard-display-column.form-input--dashboard-display-column-2
+          .form-input--dashboard-display-column.form-input--dashboard-display-column-3
+
+    .form-input.form-input--lrg-height
+      .form-input__field.form-input__field--small.form-input__image-text = t("browse")
+      = f.input :logo, as: :file, input_html: { class: 'form-input__field--small form-input__opacity-0' }
+      = @company.logo_image
+
+    .custom-field
+      .ptv-grid__column-1.ptv-grid__column-1--empty
+      .ptv-grid__column-2
+        = f.button :submit, t("company_form_save"), class: 'button--admin button--save custom-field__button-save u-background-dark'

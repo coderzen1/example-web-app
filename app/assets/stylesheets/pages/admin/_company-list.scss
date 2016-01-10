@@ -1,0 +1,33 @@
+.company-list {
+  position: relative;
+
+  &.company-list--locations {
+    padding-top: 50px;
+  }
+}
+
+.company-list__header {
+  height: 137px;
+  background-color: $primary-background-color;
+  width: 100%;
+
+  .company-list__add-company-button {
+    position: absolute;
+    top: 46px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+.company-list__title {
+  width: 100%;
+  font-size: 44px;
+  line-height: 48px;
+  color: $primary-text-color;
+  text-align: left;
+
+  @include desktop {
+    text-align: center;
+  }
+}

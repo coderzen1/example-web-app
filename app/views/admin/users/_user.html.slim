@@ -1,0 +1,16 @@
+.ptv-list__row
+  .ptv-list__user-card
+    .ptv-list__card-name--user = user.company.name
+    .ptv-list__address-row
+      .ptv-list__address = user.email
+      .ptv-list__action-link = link_to t("users_edit_link"), edit_admin_company_user_path(user.company, user)
+
+
+/ td
+/   = user.show_active_status
+/ td
+/   = link_to user.toggle_activation_message, toggle_activation_admin_company_user_path(user.company, user)
+/ td
+/   = link_to t("users_edit_link"), edit_admin_company_user_path(user.company, user)
+/ td
+/   = link_to t("users_delete_link"), admin_company_user_path(user.company, user), method: :delete

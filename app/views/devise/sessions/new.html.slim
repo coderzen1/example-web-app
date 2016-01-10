@@ -1,0 +1,28 @@
+section.sign-in
+  .sign-in__content
+    .sign-in__text
+      .sign-in__title = t('admin_header_title')
+      .sign-in__subtitle = t('admin_header_subtitle')
+
+    h2.sign-in__main-title = t("devise_session_form_title")
+
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+
+      .sign-in__field
+        = f.input :email, autofocus: true, input_html: { class: "sign-in__input" }, label_html: { class: "sign-in__label" }
+
+      .sign-in__field
+        = f.input :password, autocomplete: "off", input_html: { class: "sign-in__input" }, label_html: { class: "sign-in__label" }
+
+      .sign-in__help
+        = render "devise/shared/links"
+
+      - if devise_mapping.rememberable?
+        .field.sign-in__checkbox
+          = f.check_box :remember_me, class: "sign-in__checkbox-input"
+          = f.label :remember_me, class: "sign-in__help-label"
+            | Remember me
+            span.sign-in__checkbox-span
+
+        .actions
+          = f.submit t("devise_session_form_submit"), class: 'sign-in__field sign-in__submit-button'

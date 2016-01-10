@@ -1,0 +1,24 @@
+{
+  "token": "PTV_Loc_Infinum_BY1FII2CD",
+  "source": "ptv_arrival_app",
+  "tour":{
+    "stops": [
+      {
+        "coordinate": {
+          "locationX": 15.9889981,
+          "locationY": 45.8033957
+        },
+        "locationId": "RPGJNQ614F27S5Q74WJ1G8QG6",
+        "earliestArrivalTime": "1991-12-23T22:23:00.000Z",
+        "latestDepartureTime": "1991-12-23T22:23:00.000Z",
+        "customData": {
+          "weight": "450",
+          "height": "200"
+        }
+      }
+    ],
+    "vehicle": {
+        "vehicleProfileID": "mg-transporter"
+    }
+  }
+}

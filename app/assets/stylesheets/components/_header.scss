@@ -1,0 +1,180 @@
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+
+  height: $header-height;
+
+  box-shadow: 0 2px 5px $primary-shadow-color;
+
+  &.header--collapsed {
+    height: $header-collapsed-height;
+
+    .header__logo {
+      display: none;
+    }
+
+    .header__address {
+      font-size: 24px;
+      font-weight: normal;
+
+      line-height: 28px;
+    }
+
+    .header__current-date-container {
+      display: flex;
+    }
+
+    .header__current-date-item {
+      display: flex;
+
+      align-items: center;
+
+      flex: 2;
+
+      justify-content: center;
+    }
+
+    .header__current-date-time {
+      font-size: 32px;
+      line-height: 38px;
+
+      flex: 1;
+    }
+
+    .header__button {
+      display: block;
+
+      width: 60px;
+      cursor: pointer;
+
+      background: {
+        color: $primary-background-color;
+        image: asset-url('expand.svg');
+        repeat: no-repeat;
+        position: center;
+        size: 14px;
+      }
+
+      &.header__button--fullscreen {
+        background-image: none;
+        text-align: center;
+        line-height: 60px;
+        font-size: 20px;
+      }
+    }
+
+    .header__nav-dropdown {
+      height: $header-collapsed-height;
+    }
+
+    .header__nav-dropdown--locations {
+      top: $header-collapsed-height;
+      bottom: auto;
+    }
+
+    .header__collapse-button,
+    .header__fullscreen-button {
+      display: none;
+    }
+  }
+
+  .header__sidebar {
+    width: 60px;
+
+    background: {
+      image: asset-url('hamburger.svg');
+      repeat: no-repeat;
+      position: 17px 21px;
+      size: auto 17px;
+    }
+  }
+
+  .header__user {
+    flex: 1;
+  }
+
+  .header__address {
+    position: relative;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 49px;
+
+    display: flex;
+
+    width: 30%;
+    padding: 0 20px;
+
+    text-align: center;
+
+    color: $base-white-color;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__address-menu {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    right: 0;
+    left: auto;
+  }
+
+  .header__current-date {
+    display: flex;
+
+    width: 24%;
+
+    text-align: center;
+
+    color: $base-white-color;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__current-date-date {
+    font-size: 24px;
+
+    line-height: 28px;
+
+    padding: 0 10px;
+  }
+
+  .header__current-date-time {
+    font-size: 42px;
+    font-weight: 900;
+
+    line-height: 49px;
+
+    padding: 0 10px;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__fullscreen-button,
+  .header__collapse-button {
+    position: fixed;
+    z-index: 1;
+    top: $header-height + 10px;
+    right: 66px;
+    cursor: pointer;
+
+    background-image: asset-url('collapse.svg');
+  }
+
+  .header__fullscreen-button {
+    right: 16px;
+    background-image: none;
+    text-align: center;
+    line-height: 40px;
+    font-size: 26px;
+  }
+}

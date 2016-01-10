@@ -1,0 +1,17 @@
+- if flash[:api_error]
+  .notice = flash[:api_error]
+
+.company-list.company-list--locations
+  .ptv-list__container.search-form
+    .search-form__wrapper
+      = link_to t("locations_index_add_new"), new_admin_company_location_path, class: 'button--admin button--admin-dark search-form__button search-form__button--add'
+      = render "search_form"
+
+  .ptv-list
+    .ptv-list__header
+      .ptv-list__header-element.ptv-list__header-element--column-2 = sort_link(@q, :name, t("locations_index_table_header_company"))
+      .ptv-list__header-element.ptv-list__header-element--column-2 = t("locations_index_table_header_address")
+    = render partial: 'location', collection: @locations
+
+  br
+  = paginate @locations

@@ -1,0 +1,6 @@
+nav.nav-dropdown.nav-dropdown--full-width
+  .header__address-menu.nav-dropdown--icon.nav-dropdown--icon-only.u-background-light.js-nav-dropdown--locations
+    .nav-dropdown__item-icon = inline_svg('icons/arrow-dropdown.svg', class: 'nav-dropdown__icon nav-dropdown__icon--down-arrow')
+  .nav-dropdown__menu.nav-dropdown__menu--locations.header__nav-dropdown--locations.u-background-dark
+    - current_company.locations.persisted.each do |item|
+      = link_to item.name, arrivals_path(item.show_token), class: "nav-dropdown__menu-item"

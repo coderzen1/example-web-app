@@ -1,0 +1,60 @@
+.search-form {
+  margin-top: 40px;
+  margin-bottom: 60px;
+
+  .search-form__wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .company_search,
+  .user_search,
+  .location_search {
+    width: 100%;
+  }
+
+  .search-form__form-input--company {
+    display: flex;
+  }
+
+  .search-form__input-field {
+    font-size: 18px;
+    line-height: 43px;
+    height: 44px;
+    margin-left: 0;
+  }
+
+  .search-form__input-field--company {
+    width: 100%;
+    padding: 0 0 0 22px;
+  }
+
+  .search-form__input-field--user {
+    position: relative;
+    float: right;
+    right: 61px;
+    width: 50%;
+    padding-left: 22px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: $primary-box-shadow;
+  }
+
+  .search-form__button {
+    height: 44px;
+    vertical-align: middle;
+  }
+}
+
+.search-form__button--add {
+  position: relative;
+  float: left;
+}
+
+.search-form__button--search {
+  position: absolute;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  right: 0;
+}

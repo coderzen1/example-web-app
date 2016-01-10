@@ -1,0 +1,31 @@
+.js-nested-fields.form-input__nested-fields
+  .form-input
+    = f.input :name, placeholder: t("locations_name_label"), input_html: { class: 'form-input__field--large'}
+    = link_to_remove_association image_tag('icons/x.svg'), f, class: "js-remove-custom-field form-input__button--remove form-input__button--right"
+  .form-input
+    = f.input :longitude, label: t("locations_coordinates_label"), placeholder: t("locations_longitude_placeholder"), input_html: { class: "form-input__field--half-left js-location-longitude" }
+    .form-input__inline-column--right
+      = f.input :latitude, placeholder: t("locations_latitude_placeholder"), label_html: { class: 'form-input__label--hide' }, input_html: { class: "form-input__field--half-right js-location-latitude" }
+  
+  .form-input
+    .ptv-grid__column-1.ptv-grid__column-1--empty
+    .ptv-grid__column-2
+      .form-input__field.form-input__field--large
+        = text_field_tag "", "", class: "form-input__field--fill-input js-search-address"
+
+  - if f.object.id
+    .form-input
+      .ptv-grid__column-1.ptv-grid__column-1--empty
+      .ptv-grid__column-2
+        .form-input__links-row
+          span.form-input__link-label View: 
+          span.form-input__link = link_to arrivals_url(token: f.object.show_token), arrivals_path(token: f.object.show_token), id: "js-show-link-#{f.object.id}"
+          span.form-input__link = link_to(" Refresh", refresh_token_admin_company_location_path(current_company, f.object.id, "show"), remote:true)
+    .form-input
+      .ptv-grid__column-1.ptv-grid__column-1--empty
+      .ptv-grid__column-2
+        .form-input__links-row
+          .form-input__link-label Book: 
+          .form-input__link = link_to arrival_new_url(token: f.object.edit_token), arrival_new_path(token: f.object.edit_token), id: "js-edit-link-#{f.object.id}"
+          .form-input__link = link_to("  Refresh", refresh_token_admin_company_location_path(current_company, f.object.id, "edit"), remote:true)
+  

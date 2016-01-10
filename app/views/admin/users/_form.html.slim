@@ -1,0 +1,6 @@
+.ptv-grid.custom-field
+  .custom-field__add-field
+    = simple_form_for [:admin, current_company, @user] do |f|
+      .form-input
+        = f.input :email, placeholder: t("email")
+        = f.button :submit, t("users_form_invite"), class: "button--admin button--save custom-field__button-save u-background-dark"

@@ -1,0 +1,21 @@
+nav.nav-dropdown.u-background-dark
+  .nav-dropdown__menu.nav-dropdown__menu--main.u-background-dark
+    .nav-dropdown__header
+      .nav-dropdown__menu-item.nav-dropdown__menu-item--header.header__nav-dropdown.js-nav-dropdown--main
+        .nav-dropdown__item-title = t("header_nav_dropdown_menu")
+        .nav-dropdown__item-icon.nav-dropdown__item-icon--menu = inline_svg('icons/ic-menu.svg', class: 'nav-dropdown__icon')
+    .nav-dropdown__menu-options.u-background-dark
+
+      - if user_signed_in? && controller_name == 'arrivals'
+        = link_to t("header_nav_dropdown_arrival_board"), arrivals_path(current_location.show_token), class: "nav-dropdown__menu-item #{nav_item_class(arrivals_path(current_location.show_token))}"
+        = link_to t("header_nav_dropdown_new_trucks"), arrivals_vehicles_path(current_location.show_token), class: "nav-dropdown__menu-item #{nav_item_class(arrivals_vehicles_path(current_location.show_token))}"
+        = link_to t("header_nav_dropdown_book_vehicle"), arrival_new_path(current_location.edit_token), class: "nav-dropdown__menu-item #{nav_item_class(arrival_new_path(current_location.edit_token))}"
+        = link_to t("header_nav_dropdown_settings"), edit_admin_company_path(current_company), class: "nav-dropdown__menu-item #{nav_item_class(edit_admin_company_path(current_company))}"
+        = link_to t('admin_nav_sign_out'), destroy_user_session_path, method: :delete, class: "nav-dropdown__menu-item"
+
+      - elsif user_signed_in?
+        = link_to t("header_nav_dropdown_settings"), edit_admin_company_path(current_company), class: "nav-dropdown__menu-item #{nav_item_class(edit_admin_company_path(current_company))}"
+        = link_to t('admin_nav_sign_out'), destroy_user_session_path, method: :delete, class: "nav-dropdown__menu-item"
+      - elsif current_location
+        = link_to t("header_nav_dropdown_arrival_board"), arrivals_path(current_location.show_token), class: "nav-dropdown__menu-item #{nav_item_class(arrivals_path(current_location.show_token))}"
+        = link_to t("header_nav_dropdown_new_trucks"), arrivals_vehicles_path(current_location.show_token), class: "nav-dropdown__menu-item #{nav_item_class(arrivals_vehicles_path(current_location.show_token))}"

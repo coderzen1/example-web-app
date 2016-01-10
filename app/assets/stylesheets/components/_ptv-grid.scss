@@ -1,0 +1,47 @@
+.ptv-grid {
+  @include container($primary-ptv-grid-width);
+  @include with-layout(3 0 inside) {
+    .ptv-grid__column-1 { @include span(1); }
+    .ptv-grid__column-2 { @include span(2); }
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+.ptv-grid__column-1 {
+  position: relative;
+  display: inline-block;
+
+  @include mobile {
+    text-align: center;
+  }
+
+  &.ptv-grid__column-1--empty {
+    min-height: 1px;
+  }
+}
+
+.ptv-grid__column-2 {
+  position: relative;
+  display: inline-block;
+
+  @include mobile {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  &.ptv-grid__column--flex {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.ptv-grid__main-title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 80px;
+  color: $primary-text-color;
+}

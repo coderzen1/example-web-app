@@ -1,0 +1,8 @@
+.form-input
+  = f.input :street,  label: t("form_street_label"), input_html: { class: "js-location-street form-input__field--large" }
+  .form-input__inline-column--right
+    = f.input :number,  label_html: { class: 'form-input__label--hide' }, input_html: { class: "js-location-number form-input__field--xsmall" }
+.form-input
+  = f.input :city, label: t("form_city_label"), input_html: { class: "js-location-city form-input__field--medium" }
+  .form-input__inline-column--right
+    = f.input :zip_code,  label_html: { class: 'form-input__label--hide' }, input_html: { class: "js-location-zip-code form-input__field--small-with-margin" }

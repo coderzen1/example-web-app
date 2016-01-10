@@ -1,0 +1,10 @@
+nav.company-nav
+  .company-nav__title = current_company.name
+
+  .company-nav__links
+    - if current_user.superadmin?
+      = link_to t('company_nav_users'), admin_company_users_path(current_company), class: "company-nav__link company-nav__link--users button--admin button--admin-base #{nav_button_class(admin_company_users_path(current_company))}"
+    - else
+      = link_to 'My Profile', admin_my_profile_edit_path, class: "company-nav__link company-nav__link--users button--admin #{nav_button_class(admin_my_profile_edit_path)}"
+    = link_to t('company_nav_settings'), edit_admin_company_path(current_company), class: "company-nav__link company-nav__link--settings button--admin button--admin-base #{nav_button_class(edit_admin_company_path(current_company))}"
+    = link_to "#{t('company_nav_locations')} (#{current_company.locations.count})", admin_company_locations_path(current_company), class: "company-nav__link company-nav__link--locations button--admin button--admin-base #{nav_button_class(admin_company_locations_path(current_company))}"

@@ -1,0 +1,7 @@
+nav.settings-nav
+  .settings-nav__title.u-text-dark = t("settings_nav_title")
+
+  .settings-nav__links
+    = link_to t('settings_nav_my_profile'), admin_my_profile_edit_path, class: "settings-nav__link settings-nav__link--users button--admin u-text-dark #{nav_button_class(admin_my_profile_edit_path)}"
+    = link_to t('settings_nav_settings'), edit_admin_company_path(current_company), class: "settings-nav__link settings-nav__link--settings button--admin button--admin u-text-dark #{nav_button_class(edit_admin_company_path(current_company))}"
+    = link_to "#{t('settings_nav_locations')} (#{current_company.locations.count})", admin_company_locations_path(current_company), class: "settings-nav__link settings-nav__link--locations button--admin button--admin u-text-dark #{nav_button_class(admin_company_locations_path(current_company))}"

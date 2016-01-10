@@ -1,0 +1,118 @@
+.arrivals.arrivals--trucks.js-page.js-modal-page.js-arrivals-page data-page-name="truck-arrivals"
+  .arrivals-location__wrapper
+    .arrivals-location
+      .arrivals-location__column.arrivals-location__column-1
+        .arrivals-location__column-header-title > 1h
+        .arrivals-location__column-content-wrapper
+          .arrivals-location__column-content
+            - 5.times do
+              .arrivals-location__card
+                .arrivals-location__card-title Vehicle Type: 1
+                .arrivals-location__card-time
+                  span DD, MM, YYYY, hh:mm
+                .arrivals-location__card-item
+                  span Weight
+                .arrivals-location__card-item
+                  span Height
+                .arrivals-location__card-item
+                  span item types
+
+      .arrivals-location__column.arrivals-location__column-2
+        .arrivals-location__column-header-title < 1h
+        .arrivals-location__column-content-wrapper.u-background-light
+          .arrivals-location__column-content
+            .arrivals-location__column--left
+              - 4.times do
+                .arrivals-location__card
+                  .arrivals-location__card-title Vehicle Type: 1
+                  .arrivals-location__card-time
+                    span DD, MM, YYYY, hh:mm
+                  .arrivals-location__card-item
+                    span Weight
+                  .arrivals-location__card-item
+                    span Height
+                  .arrivals-location__card-item
+                    span item types
+
+            .arrivals-location__column--right
+              - 3.times do
+                .arrivals-location__card
+                  .arrivals-location__card-title Vehicle Type: 1
+                  .arrivals-location__card-time
+                    span DD, MM, YYYY, hh:mm
+                  =link_to "Edit", arrival_edit_path(@arrivals.first.location.edit_token, @arrivals.first), remote: true, class: "js-modal-item arrivals-location__card-button"
+                  .arrivals-location__card-item
+                    span Weight
+                  .arrivals-location__card-item
+                    span Height
+                  .arrivals-location__card-item
+                    span item types
+
+      .arrivals-location__column.arrivals-location__column-3
+        .arrivals-location__column-header-title < 30m
+        .arrivals-location__column-content-wrapper.u-background-medium
+          .arrivals-location__column-content
+            / = render partial: 'arrival', collection: @arrivals
+            - 3.times do
+              .arrivals-location__card.u-background-dark
+                .arrivals-location__card-title Vehicle Type: 1
+                .arrivals-location__card-time
+                  span DD, MM, YYYY, hh:mm
+                =link_to "Edit", arrival_edit_path(@arrivals.first.location.edit_token, @arrivals.first), remote: true, class: "js-modal-item arrivals-location__card-button"
+                .arrivals-location__card-item
+                  span Weight
+                .arrivals-location__card-item
+                  span Height
+                .arrivals-location__card-item
+                  span item types
+
+
+      .arrivals-location__column.arrivals-location__column-4
+        .arrivals-location__column-header-title Arrived
+        .arrivals-location__column-content-wrapper.u-background-light
+          .arrivals-location__column-content
+            .arrivals-location__column--left
+              - 4.times do
+                .arrivals-location__card
+                  .arrivals-location__card-title Vehicle Type: 1
+                  .arrivals-location__card-time
+                    span DD, MM, YYYY, hh:mm
+                  / .arrivals-location__card-item
+                  /   span Weight
+                  / .arrivals-location__card-item
+                  /   span Height
+                  / .arrivals-location__card-item
+                  /   span item types
+
+            .arrivals-location__column--right
+              - 4.times do
+                .arrivals-location__card
+                  .arrivals-location__card-title Vehicle Type: 1
+                  .arrivals-location__card-time
+                    span DD, MM, YYYY, hh:mm
+                  / .arrivals-location__card-item
+                  /   span Weight
+                  / .arrivals-location__card-item
+                  /   span Height
+                  / .arrivals-location__card-item
+                  /   span item types
+
+    #modal
+
+
+/ .arrivals.js-modal-page
+/
+/   .button.button--fab.arrivals__collapse-button.js-button-collapse
+/   section.arrivals__board.board
+/     .board__content
+/       .board__header.board-header.u-background-primary
+/         .board-header__cell.board-header__icon
+/         .board-header__cell.board-line__main.board-header__main = t("board_header_arrival")
+/         .board-header__cell.board-line__main.board-header__main = t("board_header_will_arrive")
+/         .board-header__cell.board-header__optional = t("board_header_notes")
+/       .board__history
+/       .board__current
+/
+/   table
+/     = render partial: 'arrival', collection: @arrivals
+/   #modal

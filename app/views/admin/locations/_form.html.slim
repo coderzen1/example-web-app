@@ -1,0 +1,61 @@
+.company-form.ptv-grid
+  = simple_form_for [:admin, current_company, @location] do |f|
+    .form-input
+      = f.input :name, placeholder: t("locations_name_label")
+    .js-address-fields
+      .form-input
+        = f.input :longitude, label: t("locations_coordinates_label"), placeholder: t("locations_longitude_placeholder"), input_html: { class: "js-location-longitude form-input__field--half-left" }
+        .form-input__inline-column--right.form-input__inline-column--right-medium
+          = f.input :latitude, placeholder: t("locations_latitude_placeholder"), label_html: { class: 'form-input__label--hide' }, input_html: { class: "js-location-latitude form-input__field form-input__field--half-right form-input__field--right-end" }
+
+      = f.simple_fields_for :address, @location.address  do |address|
+        = render 'address_fields', f: address
+
+    .form-input
+      .ptv-grid__column-1.ptv-grid__column-1--empty
+      .ptv-grid__column-2
+        = text_field_tag "", "", placeholder: 'Search for location', class: "js-search-address form-input__field"
+
+    - if action_name == 'edit'
+      = f.hidden_field :revision, value: @location.revision
+      .form-input
+        .ptv-grid__column-1.ptv-grid__column-1--empty
+        .ptv-grid__column-2
+          .form-input__links-row
+            .form-input__link-label View:
+            .form-input__link = link_to arrivals_url(token: @location.show_token), arrivals_path(token: @location.show_token), id: "js-show-link-#{@location.id}"
+            .form-input__link.form-input__link--refresh = link_to(" Refresh", refresh_token_admin_company_location_path(current_company, @location.id, "show"), remote:true)
+
+      .form-input
+        .ptv-grid__column-1.ptv-grid__column-1--empty
+        .ptv-grid__column-2
+          .form-input__links-row
+            .form-input__link-label Book:
+            .form-input__link = link_to arrival_new_url(token: @location.edit_token), arrival_new_path(token: @location.edit_token), id: "js-edit-link-#{@location.id}"
+            .form-input__link.form-input__link--refresh = link_to("  Refresh", refresh_token_admin_company_location_path(current_company, @location.id, "edit"), remote:true)
+
+    h3.ptv-grid__main-title = t("location_form_custom_fields")
+
+    .custom-field.js-custom-fields
+      - @location.custom_fields.to_a.each do |field|
+        .js-field.custom-field__item
+          .form-input
+            .ptv-grid__column-1
+              = f.label :custom_fields, class: 'form-input__label custom-field__item-label'
+            .ptv-grid__column-2
+              = f.input_field :custom_fields, value: field, name: "location[custom_fields][]", class: 'form-input__field form-input__field--large custom-field__item-field'
+              = link_to image_tag('icons/x.svg'), "", class: "js-remove-custom-field form-input__button--remove custom-fields__button-remove"
+
+    .custom-field
+      .custom-field__add-field
+        .ptv-grid__column-1
+          = f.label t("location_form_add_custom_fields"), class: 'form-input__label'
+        .ptv-grid__column-2.ptv-grid__column--flex
+          = text_field_tag "", "", placeholder: t("custom_fields_add_field"), class: "js-add-field-input form-input__field form-input__field--large"
+          = link_to '', "", class: "js-add-custom-field form-input__field--xsmall button--admin button--add custom-field__button-add u-background-dark"
+
+    .custom-field
+      .custom-field__item
+        .ptv-grid__column-1.ptv-grid__column-1--empty
+        .ptv-grid__column-2
+          = f.button :submit, t("location_form_save"), class: 'button--admin button--save custom-field__button-save u-background-dark'

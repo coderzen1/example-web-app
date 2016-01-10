@@ -1,0 +1,38 @@
+header.header
+  - unless hide_navigation?
+    = render 'layouts/arrival/navigation'
+
+  .header__user.user
+    - if current_company
+      =image_tag current_company.logo, class: 'user__logo header__logo'
+      .user__info
+        .user__name.u-text-dark = current_company.name
+        .user__subtitle = t("header_arrival_dashboard")
+
+    - else
+      =image_tag('logo.png', class: 'user__logo header__logo')
+      .user__info
+        .user__name.u-text-dark = t("header_logistics_company")
+        .user__subtitle = t("header_arrival_dashboard")
+
+
+  .header__address.u-background-medium
+    - if user_signed_in?
+      span = header_nav_location_title
+      = render 'layouts/arrival/locations'
+
+
+    - elsif current_location
+      span = current_location.name
+
+
+  .header__current-date.u-background-dark
+    span.header__current-date-container
+      .header__current-date-item.header__current-date-date
+      .header__current-date-item.header__current-date-time
+
+  .header__button.header__button--expand.js-button-expand
+  .header__button.header__button--fullscreen.js-button-fullscreen f
+
+  .button.button--fab.header__collapse-button.js-button-collapse
+  .button.button--fab.header__fullscreen-button.js-button-fullscreen f

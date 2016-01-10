@@ -1,0 +1,17 @@
+/ td.js-location-pta
+/   = arrival.pta
+/ td
+/   = arrival.vehicle_type
+/ - arrival.custom_fields.each do |key, value|
+/   td
+/     = value
+/ td
+/   = link_to "Edit Arrival", arrival_edit_path(arrival.location.edit_token, arrival), remote: true
+
+.arrivals-location__card-title = t("vehicle_type_label") + arrival.vehicle_type.to_s
+.arrivals-location__card-time = arrival.pta
+- arrival.custom_fields.each do |key, value|
+  .arrivals-location__card-item
+    = value
+td
+  = link_to "Edit Arrival", arrival_edit_path(arrival.location.edit_token, arrival), remote: true, class: "js-modal-item"

@@ -1,0 +1,7 @@
+.ptv-list__row
+  .ptv-list__company-card--locations
+    .ptv-list__card-name--company = location.name
+    .ptv-list__address-row
+      .ptv-list__address = location.full_address
+      .ptv-list__action-link = link_to t("location_edit"), edit_admin_company_location_path(current_company, location)
+      .ptv-list__action-link-delete = link_to image_tag("icons/x.svg"), admin_company_location_path(current_company, location), method: :delete, data: { confirm: t('location_delete_message') }

@@ -1,0 +1,28 @@
+{
+  "location": {
+    "locationId": "DH69V2UCZIXWGUNJU54SFXLJT",
+    "revision": 1,
+    "name": "Testtest3456",
+    "coordinate": {
+      "locationX": 15.9717496000001,
+      "locationY": 45.8118682
+    },
+    "address": {
+      "postCode": "10000",
+      "city": "Zagreb",
+      "street": "Varšavska ulica"
+    },
+    "customDataFieldsForStop": [
+      {
+        "name": "a"
+      },
+      {
+        "name": "v"
+      }
+    ]
+  },
+  "responseStatus": {
+    "errorCode": "SUCCESS",
+    "message": "d66626988a414eb898f4a5840083c333"
+  }
+}

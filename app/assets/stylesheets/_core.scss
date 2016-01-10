@@ -1,0 +1,42 @@
+@include border-box-sizing;
+
+body {
+  font-family: $font-primary;
+
+  color: $primary-text-color;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input:focus,
+input:active,
+input:visited {
+  outline: none;
+}
+
+.horizontal-list {
+  min-height: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-list__item {
+  display: inline-block;
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:invalid {
+   -webkit-box-shadow: 0 0 0px 100px #F2F2F2 inset;
+}

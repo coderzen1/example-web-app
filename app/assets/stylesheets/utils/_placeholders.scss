@@ -1,0 +1,25 @@
+%container {
+  @include container();
+  @include tablet { max-width: 730px; }
+  @include desktop { max-width: 950px; }
+  @include large { max-width: 1150px; }
+  @include xlarge { max-width: 1430px; }
+}
+
+%card {
+  border-radius: 5px;
+  background: $primary-card-background-color;
+  box-shadow: $primary-box-shadow;
+  padding: 18px 20px;
+}
+
+%page-nav {
+  width: 100%;
+  min-height: 215px;
+}
+
+%page-nav__title {
+  text-align: center;
+  font-size: 48px;
+  padding-top: 40px;
+}

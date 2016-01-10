@@ -1,0 +1,12 @@
+.ptv-grid.custom-field
+  .custom-field__add-field
+    = simple_form_for current_user, url: admin_my_profile_update_path do |f|
+      .form-input
+        = f.input :email
+      .form-input
+        = f.input :current_password
+      .form-input
+        = f.input :password
+      .form-input
+        = f.input :password_confirmation
+      = f.button :submit, t("admin_users_form_edit"), class: "button--admin button--save custom-field__button-save u-background-dark"

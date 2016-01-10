@@ -1,0 +1,128 @@
+$transparent-blue-color: rgba(0, 42, 107, 0.9);
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  align-items: center;
+  background-color: $transparent-blue-color;
+  display: none;
+  opacity: 0;
+  transition: opacity 300ms;
+
+  &.is-shown {
+    display: flex;
+    will-change: opacity;
+  }
+
+  &.is-showing {
+    opacity: 1;
+
+    .modal {
+      transform: translate(0, 0);
+    }
+  }
+
+  .modal {
+    transform: translate(0, -15px);
+    transition: transform 300ms;
+  }
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  min-width: 600px;
+  min-height: 242px;
+  max-width: 80%;
+  max-height: 80%;
+  background-color: $base-white-color;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px 1px $transparent-blue-color;
+  border-radius: 10px;
+}
+
+.modal__main-title {
+  position: absolute;
+  top: -90px;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 48px;
+}
+
+.modal__header {
+  padding: 10px 100px;
+  position: relative;
+  min-height: 40px;
+
+  .modal__close-button {
+    @include stretch(0, 0, auto, auto);
+    text-align: center;
+    padding: 10px;
+    line-height: 20px;
+    width: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    color: $primary-text-color;
+
+    &:hover {
+      color: lighten($primary-text-color, 30%);
+    }
+  }
+}
+
+.modal__body {
+  overflow: auto;
+  padding: 20px 70px;
+}
+
+.modal__row {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 10px 0;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.modal__row:first-child {
+  margin-top: 0;
+}
+
+.modal__column {
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+
+  input {
+    height: 60px;
+    border-radius: 5px;
+  }
+}
+
+.modal__column-40 {
+  width: 40%;
+  padding-left: 25px;
+}
+
+.modal__column-60 {
+  width: 60%;
+}
+
+.modal__column-30 {
+  width: 30%;
+}
+
+.modal__submit {
+  width: 100%;
+  height: 60px;
+  text-align: right;
+}

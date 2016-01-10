@@ -1,0 +1,19 @@
+.arrivals {
+  padding-top: $header-height + 40px;
+
+  .arrivals__board {
+    @extend %container;
+  }
+
+  .header--collapsed ~ .arrivals__board {
+    margin-top: $header-collapsed-height;
+  }
+
+  &.arrivals--collapsed {
+    padding-top: $header-collapsed-height + 40px;
+  }
+
+  &.arrivals--trucks {
+    height: 100vh;
+  }
+}

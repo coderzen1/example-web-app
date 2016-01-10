@@ -1,0 +1,10 @@
+.admin-nav
+  ul.horizontal-list
+    .admin-nav__column-left
+      li.admin-nav__link.horizontal-list__item.u-text-dark  = link_to t('admin_header_title'), admin_root_path
+      li.horizontal-list__item = t('admin_header_subtitle')
+    .admin-nav__column-middle
+      li.admin-nav__link.horizontal-list__item.u-text-dark = link_to t('company_nav_list'), admin_companies_path
+    .admin-nav__column-right
+      li.admin-nav__link.horizontal-list__item.u-text-dark = link_to t('admin_nav_my_profile'), admin_my_profile_edit_path
+      li.admin-nav__link.admin-nav__link--light-text.horizontal-list__item = link_to t('admin_nav_sign_out'), destroy_user_session_path, method: :delete

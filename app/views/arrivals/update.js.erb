@@ -1,0 +1,6 @@
+<% if @arrival.invalid?%>
+  $('#modal').html('<%=j render "edit_form" %>')
+<%else%>
+  $('#modal').html('');
+  $(".js-arrival-<%=@arrival.id%>").html('<%=j render partial: "arrival_fields", locals: { arrival: @arrival } %>');
+<%end%>

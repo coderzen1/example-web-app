@@ -1,0 +1,11 @@
+- companies.each do |company|
+  .ptv-list__row
+    .ptv-list__icon = image_tag company.logo.url
+    .ptv-list__company-card
+      .ptv-list__card-name--company = company.name
+      .ptv-list__address-row
+        .ptv-list__address = company.full_address
+        .ptv-list__action-link = link_to t("company_edit"), edit_admin_company_path(company)
+        .ptv-list__action-link-delete = link_to image_tag("icons/x.svg"), admin_company_path(company), method: :delete, data: { confirm: t('company_delete_message') }
+
+  /   = link_to t("company_users"), admin_company_users_path(company)

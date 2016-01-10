@@ -1,0 +1,5 @@
+.ptv-list__container
+  = search_form_for @q, url:[:admin, :companies] do |f|
+    .search-form__input-row.search-form__form-input--company
+      = f.search_field :name_or_address_street_or_address_city_cont_any, class: 'form-input__field search-form__input-field search-form__input-field--company', placeholder: 'Search'
+      = f.submit '', class: 'button--admin button--search search-form__button u-background-dark'

@@ -1,0 +1,92 @@
+.board-line {
+  display: flex;
+
+  margin-bottom: 6px;
+
+  border-radius: $primary-border-radius;
+  background-color: $primary-background-color;
+  box-shadow: 0 1px 2px $primary-shadow-color;
+
+  .board-line__cell {
+    font-size: 18px;
+
+    line-height: 24px;
+
+    display: flex;
+
+    padding: 13px;
+
+    flex: 1;
+
+    align-items: center;
+
+    &:last-child {
+      border-radius: 0 $primary-border-radius $primary-border-radius 0;
+    }
+  }
+
+  .board-line__icon {
+    width: 64px;
+
+    background: {
+      image: asset-url('truck.svg');
+      repeat: no-repeat;
+      position: center;
+      size: 24px;
+    }
+
+    flex: initial;
+  }
+
+  .board-line__arrival {
+    font-size: 24px;
+
+    line-height: 28px;
+  }
+
+  &.board-line--late,
+  &.board-line--early {
+    .board-line__planned {
+      font-size: 14px;
+
+      line-height: 16px;
+    }
+
+    .board-line__estimated {
+      font-weight: bold;
+    }
+  }
+
+  &.board-line--late {
+    .board-line__estimated {
+      color: $base-red-color;
+    }
+  }
+
+  &.board-line--early {
+    .board-line__estimated {
+      color: $primary-link-color;
+    }
+  }
+
+  .board-line__arrive-in {
+    font-size: 32px;
+    font-weight: bold;
+
+    line-height: 38px;
+  }
+
+  .board-line__main {
+    width: $board-fixed-cell-width;
+
+    text-align: center;
+
+    justify-content: center;
+
+    flex: initial;
+  }
+
+  .board-line__optional {
+    margin-left: 1px;
+  }
+}

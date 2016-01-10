@@ -1,0 +1,26 @@
+- dashboard_colors = UiTheme.new(current_company)
+css:
+  .u-text-dark {
+    color: #{dashboard_colors.text_dark};
+  }
+  .u-background-dark {
+    background-color: #{dashboard_colors.background_dark};
+  }
+  .u-text-medium {
+    color: #{dashboard_colors.text_medium};
+  }
+  .u-background-medium {
+    background-color: #{dashboard_colors.background_medium};
+  }
+  .u-text-light {
+    color: #{dashboard_colors.text_light};
+  }
+  .u-background-light {
+    background-color: #{dashboard_colors.background_light};
+  }
+  .u-background-primary {
+    background-color: #{dashboard_colors.background_primary};
+  }
+
+javascript:
+  var themeColor = '#{dashboard_colors.dashboard_color}';

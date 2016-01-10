@@ -1,0 +1,53 @@
+.custom-field {
+
+  .custom-field__item {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+  }
+
+  .custom-field__input-field {
+
+    @include mobile {
+      width: 80%;
+    }
+  }
+
+  .custom-field__item-label,
+  .custom-field__item-field {
+    margin-top: 0;
+    height: $primary-input-field-height;
+  }
+
+  .custom-field__add-field {
+    position: relative;
+    clear: both;
+    margin-top: $primary-input-field-height;
+  }
+
+  .custom-field__button-add {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+    line-height: $primary-input-field-height;
+    width: 85px;
+  }
+
+  .custom-field__button-save {
+    float: right;
+    width: $primary-input-field-width;
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+    @include mobile {
+      width: 90%;
+      margin: 20px 5%;
+    }
+  }
+}

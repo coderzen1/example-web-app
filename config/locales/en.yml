@@ -1,0 +1,163 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  name: "Name"
+  email: "Email"
+  admin_header_title: "PTV Trucks"
+  admin_header_subtitle: "Arrival Board admin"
+  admin_nav_company_settings: "Company settings"
+  admin_nav_my_profile: "My profile"
+  admin_nav_sign_out: "Sign out"
+  admin_nav_companies: "Companies"
+  company_nav_users: "Users"
+  company_nav_add_new_user: "Add New User"
+  company_nav_add_new_company: "Add New Company"
+  company_nav_locations: "Locations"
+  company_nav_settings: "Company Settings"
+  company_nav_list: "Company listings"
+  settings_nav_title: "Settings"
+  settings_nav_my_profile: "My Profile"
+  settings_nav_settings: "Company Settings"
+  settings_nav_locations: "Locations"
+  settings_nav_back_to_users: "Back to user listings"
+
+  header_company_pick_location: "Pick location"
+  header_nav_dropdown_menu: "Menu"
+  header_nav_dropdown_arrival_board: "Arrival Board"
+  header_nav_dropdown_new_trucks: "New Trucks"
+  header_nav_dropdown_book_vehicle: "Book vehicle"
+  header_nav_dropdown_settings: "Settings"
+  header_logistics_company: "Logistics company"
+  header_arrival_dashboard: "Arrival dashboard"
+
+  board_header_arrival: "Arrival"
+  board_header_will_arrive: "Will arrive in"
+  board_header_notes: "Notes"
+
+  form_name_placeholder: "Name"
+  form_street_placeholder: "Street"
+  form_number_placeholder: "No."
+  form_city_placeholder: "City"
+  form_zip_placeholder: "Zip"
+  form_pick_color: "Pick main color"
+  form_name_label: "Name"
+  form_street_label: "Street/Number"
+  form_city_label: "City/Zip"
+
+  company_edit: "Edit"
+  company_users: "Users"
+  company_delete: "Delete"
+  company_form_save: "Save company"
+  company_locations_form_title: "Locations"
+  company_form_add_custom_field_button: "Add"
+
+  custom_fields_add_field: "Add a custom field"
+
+  companies_index_table_header_company: "Company"
+  companies_index_table_header_edit: "Edit"
+  companies_index_table_header_users: "Users"
+  companies_index_table_header_address: "Address"
+  companies_index_table_header_delete: "Delete"
+  company_index_add_new: "Add new company"
+
+  users_email_placeholder: "Input users email"
+  users_form_invite: "Send invite to user"
+  users_index_header_email: "Email"
+  users_index_header_active: "Active"
+  users_index_header_activation: "Activation"
+  users_index_header_edit: "Edit"
+  users_index_header_delete: "Delete"
+  users_index_invite_user: "Invite new user"
+  users_active_yes: "Yes"
+  users_active_no: "No"
+  users_toggle_activation_link_activate: "Activate"
+  users_toggle_activation_link_deactivate: "Deactivate"
+  users_edit_link: "Edit"
+  users_delete_link: "Delete"
+  users_form_edit: "Save Settings"
+  admin_users_form_edit: "Change settings"
+
+  locations_book_arrival: "Book New Arrival"
+  locations_add_location: "Add location"
+  locations_add_placeholder: "Add a location"
+  locations_name_label: "Enter a location name"
+  locations_coordinates_label: "Coordinates"
+  locations_longitude_placeholder: "Longitude"
+  locations_latitude_placeholder: "Latitude"
+
+  admin_nav_locations: "Locations"
+  locations_index_add_new: "Add new location"
+  locations_index_table_header_company: "Location"
+  locations_index_table_header_address: "Address"
+  location_edit: "Edit"
+  company_nav_add_new_location: "Add New Location"
+  location_form_save: "Save location"
+  location_form_custom_fields: "Custom fields on Arrival board"
+  location_form_add_custom_fields: "Add custom field: "
+
+
+  devise_mailer_confirmation_instruction_header: "You can confirm your account email through the link below:"
+  devise_mailer_confirmation_instruction_title: "Welcome"
+  devise_mailer_confirmation_confirm_link: "Confirm my account"
+
+  devise_mailer_reset_password_instructions_title: "Hello"
+  devise_mailer_reset_password_instructions_request: "Someone has requested a link to change your password. You can do this through the link below."
+  devise_mailer_reset_password_instructions_link: "Change my password"
+  devise_mailer_reset_password_instructions_footer_ignore: "If you didn't request this, please ignore this email."
+  devise_mailer_reset_password_instructions_footer_description: "Your password won't change until you access the link above and create a new one."
+
+  devise_edit_password_form_title: "Change your password"
+  devise_edit_password_form_password_label: "Password"
+  devise_edit_password_form_password_confirm_label: "Confirm"
+  devise_edit_password_form_submit: "Change my password"
+
+  devise_new_password_form_title: "Forgot your password?"
+  devise_new_password_form_submit: "Send password instructions"
+
+  devise_session_form_title: "Admin log in"
+  devise_session_form_submit: "Log in"
+
+
+  arrival_book_vehicle_form_button: "Book vehicle"
+  arrival_book_vehicle_date_label: "Date"
+  arrival_book_vehicle_time_label: "Time"
+
+  arrival_update_vehicle_form_button: "Update vehicle"
+  arrival_time: "Arrival time"
+
+  enter_email: "Enter e-mail"
+  enter_password: "Enter password"
+  browse: "Browse..."
+  dashboard_color: "Dashboard Color"
+  save: "Save"
+
+  company_search_form_submit: "Search"
+
+  not_authorized_message: "You are not authorized to perform this action!"
+
+  company_delete_message: "Are you sure you want to delete this company? If you delete it, all users, locations and arrivals assigned to this company will also be deleted!"
+
+  location_delete_message: "Are you sure you want to delete this location? If you delete it, all arrivals assigned to this location will also be deleted!"
+
+  vehicle_type_label: "Vehicle type: "
+
+  revision_error_message: "Bad revision number! Please update location again!"

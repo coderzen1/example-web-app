@@ -1,0 +1,46 @@
+$susy: (
+  columns: 12,
+  gutters: 0.25,
+  gutter-position: inside
+);
+
+$retina: 'only screen and (min-resolution: 2dppx)';
+$mobile-small: '(max-width: 550px)';
+$mobile: '(max-width: 767px)';
+$mobile-big: '(min-width: 551px) and (max-width: 767px)';
+$tablet: '(min-width: 768px)';
+$tablet-only: '(min-width: 768px) and (max-width: 991px)';
+$desktop: '(min-width: 992px)';
+$desktop-only: '(min-width: 992px) and (max-width: 1199px)';
+$large: '(min-width: 1200px)';
+$large-only: '(min-width: 1200px) and (max-width: 1449px)';
+$xlarge: '(min-width: 1450px)';
+
+$primary-border-radius: 2px;
+
+$board-content-height: 30px;
+$board-header-height: 80px;
+$board-fixed-cell-width: 150px;
+
+$header-height: 150px;
+$header-collapsed-height: 60px;
+$header-collapsed-height-negative: -60px;
+
+$form-label-column-width: 33.333%;
+$form-input-column-width: 66.666%;
+$primary-input-field-width: 486px;
+$secondary-input-field-width: 385px;
+$primary-input-row-height: 50px;
+$primary-input-field-height: 50px;
+$primary-input-padding-left: 22px;
+$primary-input-margin-left: 64px;
+$primary-input-row-margin-top: 20px;
+
+$primary-ptv-grid-width: 826px;
+$primary-ptv-grid-column-2-margin-left: 64px;
+
+$primary-box-shadow: 0 1px 2px $primary-card-shadow-color, inset 0 1px 0 $base-white-color;
+
+$font-primary: 'Roboto', Arial, sans-serif;
+$primary-font-size: 18px;
+$secondary-font-size: 24px;

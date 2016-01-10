@@ -1,0 +1,14 @@
+.arrivals.js-modal-page.js-page.js-arrivals-page data-page-name="arrivals"
+
+  section.arrivals__board.board
+    .board__content
+      .board__header.board-header.u-background-primary
+        .board-header__cell.board-header__icon
+        .board-header__cell.board-line__main.board-header__main = t("board_header_arrival")
+        .board-header__cell.board-line__main.board-header__main = t("board_header_will_arrive")
+        - @location.custom_fields.to_a.each do |field|
+          = content_tag(:div, field, class: ['board-header__cell', 'board-header__optional'], data: {'title': field})
+      .board__history
+      .board__current
+
+  #modal

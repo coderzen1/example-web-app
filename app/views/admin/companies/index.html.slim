@@ -1,0 +1,17 @@
+.company-list
+  .company-list__header
+    .ptv-list__container
+      .company-list__title = t("admin_nav_companies")
+      = link_to t("company_index_add_new"), new_admin_company_path, class: 'button--admin button--admin-dark company-list__add-company-button'
+
+  .search-form
+    = render "search_form"
+
+  .ptv-list
+    .ptv-list__header
+      .ptv-list__header-element.ptv-list__header-element--column-1 = sort_link(@q, :name, t("companies_index_table_header_company"))
+      .ptv-list__header-element.ptv-list__header-element--column-2 = t("companies_index_table_header_address")
+    = render 'company', companies: @companies
+
+  br
+  = paginate @companies

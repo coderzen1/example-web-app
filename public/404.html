@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The page you were looking for doesn't exist (404)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+  body {
+    background-color: #ECECEC;
+    color: #333333;
+    text-align: center;
+    font-family: 'Roboto', arial, sans-serif;
+    margin: 0;
+  }
+
+  div.dialog {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  div.dialog__content {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  h1.dialog__main-title {
+    font-size: 48px;
+    color: #333333;
+    line-height: 57px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  h2.dialog__subtitle,
+  div.dialog__text {
+    font-size: 24px;
+    text-align: center;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  div.dialog__text {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+
+  div.dialog__image-container {
+    position: relative;
+  }
+
+  img.dialog__image {
+    max-width: 100%;
+    margin-bottom: 90px;
+  }
+
+  div.dialog__image-box {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 30px;
+    text-align: center;
+    color: #979797;
+    height: 82px;
+    line-height: 82px;
+    width: 330px;
+    border: 1px dotted #979797;
+  }
+
+  button.dialog__button {
+    width: 486px;
+    height: 100px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #cc0000;
+    border: 0;
+    border-radius: 5px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button.dialog__button:hover {
+    background-color: #DB3333;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- This file lives in public/404.html -->
+  <div class="dialog">
+    <div class="dialog__content">
+      <h1 class="dialog__main-title">Error 404</h1>
+      <h2 class="dialog__subtitle">The page you were looking for doesn't exist.</h2>
+      <div class="dialog__text">You may have mistyped the address or the page may have moved.</div>
+      <div class="dialog__image-container">
+        <img src="./server_error_404.svg" class="dialog__image" />
+        <div class="dialog__image-box">
+          ???
+        </div>
+      </div>
+      <button class="dialog__button" href="">Back to Home</button>
+    </div>
+  </div>
+</body>
+</html>

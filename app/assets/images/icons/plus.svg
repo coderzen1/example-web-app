@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4 (356) - http://www.bohemiancoding.com/sketch -->
+    <title>plus</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Admin-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="33-Admin-locations" sketch:type="MSArtboardGroup" transform="translate(-1009.000000, -1115.000000)" fill="#FFFFFF">
+            <g id="Group-Copy-5" sketch:type="MSLayerGroup" transform="translate(370.000000, 1094.000000)">
+                <g id="Group" sketch:type="MSShapeGroup">
+                    <g id="plus_whole_button" transform="translate(606.000000, 0.000000)">
+                        <path d="M45,21 L41,21 L41,29 L33,29 L33,33 L41,33 L41,41 L45,41 L45,33 L53,33 L53,29 L45,29 L45,21 L45,21 Z" id="plus"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+.user {
+  display: flex;
+
+  background: $primary-background-color;
+
+  align-items: center;
+
+  .user__logo {
+    max-height: 135px;
+    margin: 7px 14px 7px 30px;
+
+    flex-shrink: 0; // Fixes an issue witch stretching of the image when there is not enough space
+  }
+
+  .user__info {
+    margin: 10px 16px;
+  }
+
+  .user__name {
+    font-size: 28px;
+    font-weight: bold;
+
+    line-height: 33px;
+  }
+
+  .user__subtitle {
+    font-size: 18px;
+
+    line-height: 21px;
+  }
+}

@@ -1,0 +1,29 @@
+.new-arrivals
+  .new-arrivals__nav
+    .new-arrivals__nav-title = t("locations_book_arrival")
+    .new-arrivals__nav-subtitle.u-text-dark = @arrival.location.name
+    - if flash[:scemid]
+      .notice = flash[:scemid]
+    - if flash[:api_error]
+      .notice = flash[:api_error]
+  .new-arrivals__booking-form.ptv-grid.custom-field
+    = simple_form_for @arrival, html: { novalidate: false } do |f|
+      .form-input
+        .ptv-grid__column-1
+          = f.label t('arrival_book_vehicle_date_label'), class: 'form-input__label'
+        .ptv-grid__column-2
+          = text_field_tag "arrival[pta][date]", nil, required: true, placeholder: 'dd/mm/yyyy', class: 'form-input__field form-input__field--half-left-with-label js-datepicker'
+
+          = f.label t('arrival_book_vehicle_time_label'), class: 'form-input__label form-input__label--100'
+          = text_field_tag "arrival[pta][time]", nil, required: true, placeholder: 'hh:mm', class: 'form-input__field form-input__field--half-right-with-label for-input__field--right-end js-timepicker'
+
+      .form-input
+        = f.input :vehicle_type, as: :select, collection: Arrival.vehicle_types.map{|k,v| [k,v]}
+
+        - @location_custom_fields.to_a.each do |field|
+          .form-input
+            .ptv-grid__column-1
+              .form-input__label = f.label field
+            .ptv-grid__column-2
+              .form-input__field = text_field_tag "arrival[custom_fields][#{field}]", "", class: 'form-input__field--fill-input'
+      = f.button :submit, t("arrival_book_vehicle_form_button"), class: 'button--admin button--save custom-field__button-save u-background-dark'

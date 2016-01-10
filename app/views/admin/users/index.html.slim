@@ -1,0 +1,15 @@
+.users-main
+
+  .ptv-list__container.search-form
+    .search-form__wrapper
+      = link_to t("users_index_invite_user"), new_admin_company_user_path(company_id: current_company), class: 'button--admin button--admin-dark search-form__button search-form__button--add'
+      = render "search_form"
+
+  .ptv-list
+    .ptv-list__header
+      .ptv-list__header--user-name = sort_link(@q, :name, t("companies_index_table_header_company"))
+      .ptv-list__header--user-email = sort_link(@q, :email, t("users_index_header_email"))
+    = render partial: 'user', collection: @users
+
+  br
+  = paginate @users

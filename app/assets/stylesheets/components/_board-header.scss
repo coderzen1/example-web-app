@@ -1,0 +1,41 @@
+.board-header {
+  font-size: 18px;
+
+  line-height: 21px;
+
+  position: fixed;
+
+  display: flex;
+
+  width: 100%;
+
+  margin-left: -2px; // To hide the shadow
+
+  .board-header__cell {
+    font-weight: normal;
+
+    padding: 23px 13px 13px;
+
+    flex: 1;
+  }
+
+  .board-header__main {
+    width: $board-fixed-cell-width;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    flex: initial;
+  }
+
+  .board-header__optional {
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .board-header__icon {
+    width: 64px;
+
+    flex: initial;
+  }
+}

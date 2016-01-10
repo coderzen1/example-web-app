@@ -1,0 +1,20 @@
+{
+  "stops":[
+    {
+      "coordinate": {
+        "locationX": 15.9889981,
+        "locationY": 45.8033957
+      },
+    "earliestArrivalTime":"1991-12-23T22:23:00.000Z",
+    "latestDepartureTime":"1991-12-23T22:23:00.000Z",
+    "serviceTimeAtStop":0,
+    "useServicePeriodForRecreation":true,
+    "weightWhenLeavingStop":0,
+    "customData":{
+      "height": "200",
+      "weight": "450"},
+    "scemid":"6UYFRTU4NP"
+    }],
+ "token":"PTV_Loc_Infinum_BY1FII2CD",
+ "source": "ptv_arrival_app"
+}

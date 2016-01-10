@@ -1,0 +1,40 @@
+.company-nav {
+  @extend %page-nav;
+  background-color: $primary-background-color;
+
+  &.company-nav__small-header {
+    min-height: 137px;
+    &.company-nav__small-header--margin-top {
+      margin-top: 20px;
+    }
+  }
+}
+
+.company-nav__title {
+  @extend %page-nav__title;
+  color: $primary-text-color;
+}
+
+.company-nav__title--small {
+  font-size: 32px;
+}
+
+.company-nav__title--header {
+  background-color: $primary-background-color;
+}
+
+.company-nav__links {
+  @include container(825px);
+  @include with-layout(3 .05 after) {
+    .company-nav__link { @include span(1); }
+    .company-nav__link:last-child { @include last; }
+    .company-nav__link--push-1 { @include span(1); @include push(1); }
+  }
+  margin-top: 30px;
+  text-align: center;
+}
+
+.company-nav__link {
+  color: $primary-text-color;
+  text-align: center;
+}
